@@ -16,31 +16,31 @@ function App() {
             onClick={() => setColor("green")}
             className="bg-green-600 px-8 py-2 rounded-full inset-y-0"
           >
-            green
+            Green
           </button>
           <button
             onClick={() => setColor("black")}
             className=" bg-black text-white px-8 py-2 rounded-full inset-y-0"
           >
-            black
+            Black
           </button>
           <button
             onClick={() => setColor("white")}
             className="bg-white-400 px-8 py-2 rounded-full inset-y-0"
           >
-            white
+            White
           </button>
           <button
             onClick={() => setColor("blue")}
             className="bg-blue-400 px-8 py-2 rounded-full inset-y-0"
           >
-            blue
+            Blue
           </button>
           <button
             onClick={() => setColor("purple")}
             className="bg-purple-400 px-8 py-2 rounded-full inset-y-0"
           >
-            purple
+            Purple
           </button>
         </div>
       </div>
