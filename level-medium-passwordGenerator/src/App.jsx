@@ -10,7 +10,7 @@ function App() {
 
   const copyPasswordToClip = useCallback(() => {
     window.navigator.clipboard.writeText(password);
-    window.alert("text copied");
+    passRef.current?.select();
   }, [password]);
 
   const passwordGenerator = useCallback(() => {
@@ -32,23 +32,25 @@ function App() {
   }, [length, numberAllowed, charAllowed, passwordGenerator]);
   return (
     <>
-      <div className=" flex justify-center flex-col  w-6xl h-56 rounded-2xl text-white p-5 my-20 bg-gray-700">
-        <h1 className="text-center text-2xl">Password Generator</h1>
-        <div className="flex flex-col justify-center">
+      <div className=" flex justify-center flex-col flex-wrap  w-7xl h-66 rounded-2xl text-white p-5 my-20 bg-gray-700">
+        <h1 className="text-center text-2xl ">Password Generator</h1>
+        <div className="w-full flex flex-col justify-center items-center">
           <input
-            className="bg-white text-black p-5"
+            className="bg-white text-black p-5 w-full"
             readOnly
             placeholder="Here is your password"
             value={password}
             type="text"
             ref={passRef}
           />
-          <button
-            onClick={copyPasswordToClip}
-            className="bg-blue-400 p-4 w-fit"
-          >
-            copy
-          </button>
+          <div>
+            <button
+              onClick={copyPasswordToClip}
+              className="bg-blue-400 p-4 w-fit cursor-pointer "
+            >
+              copy
+            </button>
+          </div>
         </div>
         <input
           type="range"
