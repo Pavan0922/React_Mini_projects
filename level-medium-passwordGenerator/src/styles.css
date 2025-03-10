@@ -1,7 +1,7 @@
 @import "tailwindcss";
 body,
 html {
-  background: #000;
+  background: black;
   display: flex;
   justify-content: center;
 }
